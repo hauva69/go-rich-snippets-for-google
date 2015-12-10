@@ -23,5 +23,8 @@ _testmain.go
 *.test
 *.prof
 
+# The binary
+go-rich-snippets-for-recipes
+
 # Idea files
 .idea/
