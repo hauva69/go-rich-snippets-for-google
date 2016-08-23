@@ -1,8 +1,15 @@
 package main
 
 import (
-	"fmt"
+	"log"
+	"net/http"
+
+	"github.com/labstack/echo"
+	"github.com/labstack/echo/engine/standard"
+	"gopkg.in/mgo.v2"
 )
+
+const PORT = ":4242"
 
 type Author struct {
 	Type string `json:@type`
@@ -15,7 +22,7 @@ type AggregateRating struct {
 	ReviewCount string `json:"reviewCount"`
 }
 
-type RichSnippet struct {
+type RecipeRichSnippet struct {
 	Context         string          `json:"@context"`
 	Type            string          `json:"@type"`
 	Name            string          `json:"name"`
@@ -28,6 +35,43 @@ type RichSnippet struct {
 	TotalTime       string          `json:"totalTime"`
 }
 
+type ItemReviewed struct {
+	Type string `json:"@type"`
+	Name string `json:"name"`
+}
+
+type ReviewRating struct {
+	Type        string `json:"@type"`
+	RatingValue string `json:"ratingValue"`
+}
+
+type Publisher struct {
+	Type string `json:"@type"`
+	Name string `json:"name"`
+}
+
+type ReviewRichSnippet struct {
+	Context      string       `json:"@context"`
+	Type         string       `json:"@type"`
+	Author       Author       `json:"author"`
+	ReviewBody   string       `json:"reviewBody"`
+	ReviewRating ReviewRating `json:"reviewRating"`
+	ItemReviewed ItemReviewed `json:"itemReviewed"`
+}
+
+func teapot(c echo.Context) error {
+	return c.String(http.StatusTeapot, "I am a teapot\n")
+}
+
 func main() {
-	fmt.Println("hello, world")
+	session, err := mgo.Dial("localhost")
+	if err != nil {
+		log.Print(err)
+		panic(err)
+	}
+	defer session.Close()
+
+	e := echo.New()
+	e.Get("/teapot", teapot)
+	e.Run(standard.New(PORT))
 }
