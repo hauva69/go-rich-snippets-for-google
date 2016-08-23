@@ -28,3 +28,6 @@ go-rich-snippets-for-recipes
 
 # Idea files
 .idea/
+
+# Emacs
+*~
