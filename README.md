@@ -1,6 +1,7 @@
-# go-rich-snippets-for-google
-Create rich snippets for recipes as described in [Google Developers: Create rich snippets for recipes](https://developers.google.com/structured-data/rich-snippets/recipes)
-https://developers.google.com/structured-data/
-https://developers.google.com/structured-data/rich-snippets/
-https://developers.google.com/structured-data/slsb-overview
+# go-rich-snippets-for-recipes
+Create rich snippets for recipes as described in
+
+* [Rich Snippets](https://developers.google.com/structured-data/rich-snippets/)
+  * [Google Developers: Create rich snippets for recipes](https://developers.google.com/structured-data/rich-snippets/recipes)
+  * [Google Developers: Create rich snippets for reviews](https://developers.google.com/structured-data/rich-snippets/reviews)
 
