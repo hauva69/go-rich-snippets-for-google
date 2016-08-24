@@ -9,8 +9,8 @@ import { RICH_SNIPPETS_FOR_RECIPES } from './mock';
 export class RichSnippetForRecipeComponent {
     richSnippets: RichSnippetForRecipe[];
 
-    saveRichSnippet() {
-        alert("saving");
+    saveRichSnippet(snippet) {
+        alert('Saving' + JSON.stringify(snippet);
     }
 
     ngOnInit() {
