@@ -16,12 +16,6 @@
 <label>Total time</label><br>
 <input class="text" [(ngModel)]="richSnippets[0].totalTime"><br>
 
-<ul>
-    <li>Preparation time: {{richSnippets[0].preparationTime}}</li>
-    <li>Cooking time: {{richSnippets[0].cookingTime}}</li>
-    <li>Total time: {{richSnippets[0].totalTime}}</li>
-</ul>
-
 <button (click)="saveRichSnippet(richSnippets[0])">Save</button>
 
 <pre>{{richSnippets[0] | json}}</pre>
