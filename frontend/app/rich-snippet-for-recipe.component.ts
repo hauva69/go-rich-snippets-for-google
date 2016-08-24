@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RichSnippetForRecipe } from './rich-snippet-for-recipe';
 import { RICH_SNIPPETS_FOR_RECIPES } from './mock';
+import {RichSnippetForRecipeService} from "./rich-snippet-for-recipe.service";
 
 @Component({
     selector: 'rich-snippet-for-recipe',
@@ -14,6 +15,8 @@ export class RichSnippetForRecipeComponent {
     }
 
     ngOnInit() {
-        this.richSnippets = RICH_SNIPPETS_FOR_RECIPES;
+        let richSnippetService = new RichSnippetForRecipeService();
+        //this.richSnippets = RICH_SNIPPETS_FOR_RECIPES;
+        this.richSnippets = richSnippetService.getRichSnippets();
     }
 }
