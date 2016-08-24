@@ -10,13 +10,14 @@ import {RichSnippetForRecipeService} from "./rich-snippet-for-recipe.service";
 export class RichSnippetForRecipeComponent {
     richSnippets: RichSnippetForRecipe[];
 
+    constructor(private richSnippetService: RichSnippetForRecipeService) {}
+
     saveRichSnippet(snippet) {
         alert('Saving' + JSON.stringify(snippet);
     }
 
     ngOnInit() {
         let richSnippetService = new RichSnippetForRecipeService();
-        //this.richSnippets = RICH_SNIPPETS_FOR_RECIPES;
         this.richSnippets = richSnippetService.getRichSnippets();
     }
 }
