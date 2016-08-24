@@ -1,11 +1,11 @@
-<img [src]="richSnippetForRecipe.imageUrl" width="800px">
-<h2>Name: {{richSnippetForRecipe.name}}</h2>
-<p>Recipe category: {{richSnippetForRecipe.recipeCategory}}</p>
-<p>Published: {{richSnippetForRecipe.datePublished}}</p>
-<p>{{richSnippetForRecipe.description}}</p>
+<img [src]="richSnippets[0].imageUrl" width="800px">
+<h2>Name: {{richSnippets[0].name}}</h2>
+<p>Recipe category: {{richSnippets[0].recipeCategory}}</p>
+<p>Published: {{richSnippets[0].datePublished}}</p>
+<p>{{richSnippets[0].description}}</p>
 
 <ul>
-    <li>Preparation time: {{richSnippetForRecipe.preparationTime}}</li>
-    <li>Cooking time: {{richSnippetForRecipe.cookingTime}}</li>
-    <li>Total time: {{richSnippetForRecipe.totalTime}}</li>
+    <li>Preparation time: {{richSnippets[0].preparationTime}}</li>
+    <li>Cooking time: {{richSnippets[0].cookingTime}}</li>
+    <li>Total time: {{richSnippets[0].totalTime}}</li>
 </ul>

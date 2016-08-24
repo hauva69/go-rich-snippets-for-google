@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import {RichSnippetForRecipe} from "./rich-snippet-for-recipe";
 
 @Component({
     selector: 'rich-snippet-for-recipe',
     templateUrl: 'app/rich-snippet-for-recipe.component.html'
 })
 export class RichSnippetForRecipeComponent {
-    richSnippetForRecipe = {
+    richSnippets: RichSnippetForRecipe[] = [{
         'name': 'Ginger Pork Donburi',
         'recipeCategory': 'entree',
         'imageUrl': 'https://c1.staticflickr.com/2/1565/26263100680_15298ae98e_k.jpg',
@@ -15,5 +16,5 @@ export class RichSnippetForRecipeComponent {
         'preparationTime': '15 minutes',
         'cookingTime': '1 hour',
         'totalTime': '1 hour 15 minutes'
-    }
+    }];
 }
