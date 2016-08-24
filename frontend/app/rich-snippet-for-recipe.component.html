@@ -1,8 +1,14 @@
 <img [src]="richSnippets[0].imageUrl" width="800px">
-<h2>Name: {{richSnippets[0].name}}</h2>
-<p>Recipe category: {{richSnippets[0].recipeCategory}}</p>
-<p>Published: {{richSnippets[0].datePublished}}</p>
-<p>{{richSnippets[0].description}}</p>
+<h2>{{richSnippets[0].name}}</h2>
+
+<label>Name</label><br>
+<input class="text" [(ngModel)]="richSnippets[0].name"><br>
+<label>Recipe category</label><br>
+<input class="text" [(ngModel)]="richSnippets[0].recipeCategory"><br>
+<label>Published</label><br>
+<input class="text" [(ngModel)]="richSnippets[0].datePublished"><br>
+<label>Description</label><br>
+<textarea rows="20" cols="80" [(ngModel)]="richSnippets[0].description">{{richSnippets[0].description}}</textarea>
 
 <ul>
     <li>Preparation time: {{richSnippets[0].preparationTime}}</li>
