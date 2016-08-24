@@ -23,16 +23,24 @@ type AggregateRating struct {
 }
 
 type RecipeRichSnippet struct {
-	Context         string          `json:"@context"`
-	Type            string          `json:"@type"`
-	Name            string          `json:"name"`
-	ImageUrl        string          `json:"image"`
-	DatePublished   string          `json:"datePublished"`
+	Context string `json:"@context"`
+	Type    string `json:"@type"`
+	// The name of the dish
+	Name string `json:"name"`
+	// The type of dish. For example: appetizer, entree, or dessert.
+	RecipeCategory string `json:"recipeCategory"`
+	// The URL of the image of the dish being prepared
+	ImageUrl string `json:"image"`
+	// The date the recipe was published, in the ISO 8601 date format.
+	DatePublished string `json:"datePublished"`
+	// A short summary describing the dish.
 	Description     string          `json:"description"`
 	AggregateRating AggregateRating `json:"aggregateRating"`
-	PreparationTime string          `json:"prepTime"`
-	CookingTime     string          `json:"cookTime"`
-	TotalTime       string          `json:"totalTime"`
+	// The length of time it takes to prepare the recipe for dish, in ISO 8601 duration format.
+	// Can use min, max as child elements to specify a range of time.
+	PreparationTime string `json:"prepTime"`
+	CookingTime     string `json:"cookTime"`
+	TotalTime       string `json:"totalTime"`
 }
 
 type ItemReviewed struct {
