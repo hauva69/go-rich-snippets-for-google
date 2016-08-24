@@ -1,20 +1,15 @@
 import { Component } from '@angular/core';
-import {RichSnippetForRecipe} from "./rich-snippet-for-recipe";
+import { RichSnippetForRecipe } from './rich-snippet-for-recipe';
+import { RICH_SNIPPETS_FOR_RECIPES } from './mock';
 
 @Component({
     selector: 'rich-snippet-for-recipe',
     templateUrl: 'app/rich-snippet-for-recipe.component.html'
 })
 export class RichSnippetForRecipeComponent {
-    richSnippets: RichSnippetForRecipe[] = [{
-        'name': 'Ginger Pork Donburi',
-        'recipeCategory': 'entree',
-        'imageUrl': 'https://c1.staticflickr.com/2/1565/26263100680_15298ae98e_k.jpg',
-        'datePublished': '2016-04-20',
-        'description': 'Japanese donburi i.e. rice in a bowl with ginger pork topping.',
-        'aggregateRating': 0,
-        'preparationTime': '15 minutes',
-        'cookingTime': '1 hour',
-        'totalTime': '1 hour 15 minutes'
-    }];
+    richSnippets: RichSnippetForRecipe[];
+
+    ngOnInit() {
+        this.richSnippets = RICH_SNIPPETS_FOR_RECIPES;
+    }
 }
