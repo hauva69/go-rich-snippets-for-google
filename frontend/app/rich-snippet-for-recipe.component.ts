@@ -2,19 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'rich-snippet-for-recipe',
-    template: `
-<img [src]="richSnippetForRecipe.imageUrl" width="800px">
-<h2>Name: {{richSnippetForRecipe.name}}</h2>
-<p>Recipe category: {{richSnippetForRecipe.recipeCategory}}</p>
-<p>Published: {{richSnippetForRecipe.datePublished}}</p>
-<p>{{richSnippetForRecipe.description}}</p>
-
-<ul>
-<li>Preparation time: {{richSnippetForRecipe.preparationTime}}</li>
-<li>Cooking time: {{richSnippetForRecipe.cookingTime}}</li>
-<li>Total time: {{richSnippetForRecipe.totalTime}}</li>
-</ul>
-`
+    templateUrl: 'app/rich-snippet-for-recipe.component.html'
 })
 export class RichSnippetForRecipeComponent {
     richSnippetForRecipe = {
