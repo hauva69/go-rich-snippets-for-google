@@ -8,7 +8,13 @@
 <label>Published</label><br>
 <input class="text" [(ngModel)]="richSnippets[0].datePublished"><br>
 <label>Description</label><br>
-<textarea rows="20" cols="80" [(ngModel)]="richSnippets[0].description">{{richSnippets[0].description}}</textarea>
+<textarea rows="20" cols="80" [(ngModel)]="richSnippets[0].description">{{richSnippets[0].description}}</textarea><br>
+<label>Preparation time</label><br>
+<input class="text" [(ngModel)]="richSnippets[0].preparationTime"><br>
+<label>Cooking time</label><br>
+<input class="text" [(ngModel)]="richSnippets[0].cookingTime"><br>
+<label>Total time</label><br>
+<input class="text" [(ngModel)]="richSnippets[0].totalTime"><br>
 
 <ul>
     <li>Preparation time: {{richSnippets[0].preparationTime}}</li>
